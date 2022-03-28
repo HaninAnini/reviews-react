@@ -1,13 +1,164 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*, ::before,
+::after {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    margin: 20vh 30vw 20vh 30vw;
+    background-color: ghostwhite;
+
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-title {
+    margin-bottom: 3rem;
+}
+
+.employee {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.employee-name {
+    font-family: Arial, serif;
+}
+
+.employee-job {
+    font-family: Arial, serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    color: cornflowerblue;
+}
+
+.employee-info {
+    text-align: center;
+    font-family: Arial, serif;
+    color: grey;
+
+}
+
+.card {
+    width: 40vw;
+    background-color: white;
+    padding: 2% 2% 2% 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: .3rem;
+    border: white 2px solid;
+    box-shadow: 0 0 1rem lightgray;
+}
+
+.nav-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.prev-button {
+    font-size: 2rem;
+    border: 2px white solid;
+    background-color: white;
+    color: cornflowerblue;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+
+.prev-button:hover {
+    color: dodgerblue;
+    transform: scale(1.1);
+}
+
+.next-button:hover {
+    color: dodgerblue;
+    transform: scale(1.1)
+}
+
+
+.next-button {
+    font-size: 2rem;
+    border: 2px white solid;
+    background-color: white;
+    color: cornflowerblue;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.surprise-button {
+    background-color: cornflowerblue;
+    border: cornflowerblue 2px solid;
+    border-radius: .2rem;
+    color: white;
+    padding: 1% 1% 1% 1%;
+    cursor: pointer;
+
+}
+
+.surprise-button:hover {
+    background-color: dodgerblue;
+    border: dodgerblue 2px solid;
+    transform: scale(1.1);
+}
+
+
+.employee-img {
+    width: 100%;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+    position: relative;
+}
+
+.quote-icon {
+    position: absolute;
+    top: 0;
+    left: -1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: grid;
+    place-items: center;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+    transform: translateY(25%);
+    background: cornflowerblue;
+    color: white;
+}
+
+.img-container::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: cornflowerblue;
+    position: absolute;
+    top: -0.50rem;
+    right: -1.0rem;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+;
+}
+
+.img-container {
+    place-items: center;
+    justify-content: center;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 1rem auto 0 11rem;
+
 }
